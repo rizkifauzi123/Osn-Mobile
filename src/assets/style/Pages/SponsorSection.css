@@ -1,0 +1,695 @@
+/* ================= SPONSOR SECTION ================= */
+.sponsor-section {
+  padding: 120px 80px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsor-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sponsor-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ================= HEADER ================= */
+.sponsor-section .sponsor-header {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fff7ed, #fed7aa);
+  color: #ea580c;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sponsor-section .sponsor-badge:hover {
+  background: linear-gradient(135deg, #fed7aa, #fdba74);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+.sponsor-section .sponsor-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.sponsor-section .sponsor-subtitle {
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 16px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* ================= GRID ================= */
+.sponsor-section .sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  align-items: start;
+}
+
+/* ================= CARD ================= */
+.sponsor-section .sponsor-card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 
+    0 10px 40px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
+  padding: 36px 32px 40px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sponsor-section .sponsor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.sponsor-section .sponsor-card:hover::before {
+  left: 100%;
+}
+
+.sponsor-section .sponsor-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 
+    0 30px 70px rgba(15, 23, 42, 0.15),
+    0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+/* top accent */
+.sponsor-section .card-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 28px 28px 0 0;
+  transition: height 0.3s ease;
+}
+
+.sponsor-section .sponsor-card:hover .card-top {
+  height: 8px;
+}
+
+/* ICON */
+.sponsor-section .sponsor-card .card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  margin: 20px auto 20px;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+}
+
+/* TITLES */
+.sponsor-section .sponsor-card h3 {
+  margin: 12px 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-card h4 {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #334155;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-card p {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-card p strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* LIST */
+.sponsor-section .sponsor-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-section .sponsor-card ul li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.sponsor-section .sponsor-card ul li:hover {
+  color: #0f172a;
+  transform: translateX(4px);
+}
+
+.sponsor-section .sponsor-card ul li strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.sponsor-section .sponsor-card ul li::before {
+  content: "✓";
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.sponsor-section .sponsor-card ul li:hover::before {
+  transform: scale(1.15);
+}
+
+/* BUTTON */
+.sponsor-section .btn {
+  border: none;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sponsor-section .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.sponsor-section .btn:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.sponsor-section .btn:hover {
+  transform: translateY(-3px);
+}
+
+.sponsor-section .btn:active {
+  transform: translateY(-1px);
+}
+
+/* Remove default link styling */
+.sponsor-section a {
+  text-decoration: none;
+}
+
+/* ================= VARIANTS ================= */
+.sponsor-section .platinum .card-top {
+  background: linear-gradient(90deg, #334155, #64748b);
+}
+
+.sponsor-section .platinum ul li::before {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.sponsor-section .platinum-btn {
+  background: linear-gradient(135deg, #334155, #64748b);
+  box-shadow: 0 6px 20px rgba(51, 65, 85, 0.3);
+}
+
+.sponsor-section .platinum-btn:hover {
+  box-shadow: 0 10px 30px rgba(51, 65, 85, 0.4);
+}
+
+.sponsor-section .gold .card-top {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.sponsor-section .gold ul li::before {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.sponsor-section .gold-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+.sponsor-section .gold-btn:hover {
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+}
+
+.sponsor-section .silver .card-top {
+  background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+.sponsor-section .silver ul li::before {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.sponsor-section .silver-btn {
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+  box-shadow: 0 6px 20px rgba(148, 163, 184, 0.3);
+}
+
+.sponsor-section .silver-btn:hover {
+  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.4);
+}
+
+/* ================= DOWNLOAD PROPOSAL SECTION ================= */
+.download-proposal-section {
+  padding: 80px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+/* ================= CARD ================= */
+.download-proposal-section .download-proposal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 48px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f766e 100%);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-proposal-section .download-proposal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.download-proposal-section .download-proposal-card:hover::before {
+  left: 100%;
+}
+
+.download-proposal-section .download-proposal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px rgba(15, 23, 42, 0.35);
+}
+
+/* ================= LEFT ================= */
+.download-proposal-section .dp-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 70%;
+}
+
+.download-proposal-section .dp-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.download-proposal-section .download-proposal-card:hover .dp-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.download-proposal-section .dp-text h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.download-proposal-section .dp-text p {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* ================= BUTTON ================= */
+.download-proposal-section .dp-button {
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-proposal-section .dp-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= TABLET (≤ 1024px) ================= */
+@media (max-width: 1024px) {
+  .sponsor-section {
+    padding: 96px 40px;
+  }
+
+  .sponsor-section .sponsor-header {
+    margin-bottom: 64px;
+  }
+
+  .sponsor-section .sponsor-title {
+    font-size: 34px;
+  }
+
+  .sponsor-section .sponsor-subtitle {
+    font-size: 15px;
+  }
+
+  .sponsor-section .sponsor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .sponsor-section .sponsor-card {
+    padding: 32px 28px 36px;
+  }
+
+  .sponsor-section .sponsor-card h3 {
+    font-size: 20px;
+  }
+
+  /* Download Proposal Tablet */
+  .download-proposal-section {
+    padding: 60px 40px;
+  }
+
+  .download-proposal-section .download-proposal-card {
+    padding: 32px 40px;
+  }
+
+  .download-proposal-section .dp-left {
+    max-width: 65%;
+  }
+
+  .download-proposal-section .dp-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .download-proposal-section .dp-text h3 {
+    font-size: 22px;
+  }
+
+  .download-proposal-section .dp-text p {
+    font-size: 14px;
+  }
+
+  .download-proposal-section .dp-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+/* ================= MOBILE (≤ 768px) ================= */
+@media (max-width: 768px) {
+  .sponsor-section {
+    padding: 90px 24px 72px;
+  }
+
+  .sponsor-section::before,
+  .sponsor-section::after {
+    width: 400px;
+    height: 400px;
+  }
+
+  .sponsor-section .sponsor-header {
+    margin-bottom: 56px;
+  }
+
+  .sponsor-section .sponsor-badge {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .sponsor-section .sponsor-title {
+    font-size: 28px;
+  }
+
+  .sponsor-section .sponsor-subtitle {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .sponsor-section .sponsor-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sponsor-section .sponsor-card {
+    padding: 28px 24px 32px;
+  }
+
+  .sponsor-section .sponsor-card .card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .sponsor-section .sponsor-card h3 {
+    font-size: 18px;
+  }
+
+  .sponsor-section .sponsor-card h4 {
+    font-size: 20px;
+  }
+
+  .sponsor-section .sponsor-card p {
+    font-size: 13px;
+  }
+
+  .sponsor-section .sponsor-card ul li {
+    font-size: 13px;
+  }
+
+  .sponsor-section .sponsor-card ul li::before {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+  }
+
+  /* Download Proposal Mobile */
+  .download-proposal-section {
+    padding: 56px 24px;
+  }
+
+  .download-proposal-section .download-proposal-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .download-proposal-section .dp-left {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .download-proposal-section .dp-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+
+  .download-proposal-section .dp-text h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .download-proposal-section .dp-text p {
+    font-size: 13px;
+  }
+
+  .download-proposal-section .dp-button {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+/* ================= SMALL MOBILE (≤ 480px) ================= */
+@media (max-width: 480px) {
+  .sponsor-section {
+    padding: 80px 20px 64px;
+  }
+
+  .sponsor-section .sponsor-title {
+    font-size: 24px;
+  }
+
+  .sponsor-section .sponsor-subtitle {
+    font-size: 13px;
+  }
+
+  .sponsor-section .sponsor-card {
+    padding: 24px 20px 28px;
+  }
+
+  .sponsor-section .sponsor-card h3 {
+    font-size: 17px;
+  }
+
+  .sponsor-section .sponsor-card ul li {
+    font-size: 12.5px;
+  }
+
+  .sponsor-section .btn {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  /* Download Proposal Small Mobile */
+  .download-proposal-section {
+    padding: 48px 20px;
+  }
+
+  .download-proposal-section .download-proposal-card {
+    padding: 24px 20px;
+  }
+
+  .download-proposal-section .dp-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .download-proposal-section .dp-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .download-proposal-section .dp-text h3 {
+    font-size: 18px;
+  }
+
+  .download-proposal-section .dp-text p {
+    font-size: 12px;
+  }
+
+  .download-proposal-section .dp-button {
+    font-size: 13px;
+    padding: 11px 20px;
+  }
+}

@@ -1,0 +1,397 @@
+/* ================= ROOT ================= */
+.sponsorship-section {
+  padding: 100px 80px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.sponsorship-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(14, 165, 164, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ================= HEADER ================= */
+.sponsorship-header {
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsorship-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #0f172a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.sponsorship-badge:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.sponsorship-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+
+.sponsorship-subtitle {
+  margin-top: 14px;
+  font-size: 16px;
+  color: #64748b;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* ================= SLIDER ================= */
+.sponsorship-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.sponsorship-slider::before,
+.sponsorship-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sponsorship-slider::before {
+  left: 0;
+  background: linear-gradient(90deg, #f8fafc 0%, transparent 100%);
+}
+
+.sponsorship-slider::after {
+  right: 0;
+  background: linear-gradient(270deg, #f8fafc 0%, transparent 100%);
+}
+
+.sponsorship-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: sponsorshipScroll 30s linear infinite;
+}
+
+.sponsorship-track:hover {
+  animation-play-state: paused;
+}
+
+/* ================= CARD (SQUARE) ================= */
+.sponsorship-card {
+  width: 200px;
+  height: 200px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 
+    0 4px 20px rgba(15, 23, 42, 0.04),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sponsorship-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(14, 165, 164, 0.08), transparent);
+  transition: left 0.6s ease;
+}
+
+.sponsorship-card:hover::before {
+  left: 100%;
+}
+
+/* LOGO - WARNA ASLI TANPA FILTER */
+.sponsorship-card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+/* HOVER EFFECT */
+.sponsorship-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 50px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(14, 165, 164, 0.2);
+}
+
+.sponsorship-card:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+.sponsorship-footer {
+  margin-top: 64px;
+  font-size: 14px;
+  color: #64748b;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsorship-footer span {
+  color: #0ea5a4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.sponsorship-footer span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0ea5a4, #0d9488);
+  transition: width 0.3s ease;
+}
+
+.sponsorship-footer span:hover {
+  color: #0d9488;
+  transform: translateX(4px);
+}
+
+.sponsorship-footer span:hover::after {
+  width: 100%;
+}
+
+.sponsorship-footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.sponsorship-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes sponsorshipScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= TABLET (≤ 1024px) ================= */
+@media (max-width: 1024px) {
+  .sponsorship-section {
+    padding: 80px 40px;
+  }
+
+  .sponsorship-header {
+    margin-bottom: 56px;
+  }
+
+  .sponsorship-title {
+    font-size: 36px;
+  }
+
+  .sponsorship-subtitle {
+    font-size: 15px;
+  }
+
+  .sponsorship-track {
+    gap: 28px;
+  }
+
+  .sponsorship-card {
+    width: 180px;
+    height: 180px;
+    padding: 28px;
+  }
+
+  .sponsorship-slider::before,
+  .sponsorship-slider::after {
+    width: 80px;
+  }
+
+  .sponsorship-footer {
+    margin-top: 56px;
+  }
+}
+
+/* ================= MOBILE (≤ 768px) ================= */
+@media (max-width: 768px) {
+  .sponsorship-section {
+    padding: 80px 24px;
+  }
+
+  .sponsorship-section::before {
+    width: 400px;
+    height: 400px;
+  }
+
+  .sponsorship-header {
+    margin-bottom: 48px;
+  }
+
+  .sponsorship-badge {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .sponsorship-title {
+    font-size: 28px;
+  }
+
+  .sponsorship-subtitle {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .sponsorship-track {
+    gap: 20px;
+  }
+
+  .sponsorship-card {
+    width: 160px;
+    height: 160px;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .sponsorship-footer {
+    margin-top: 48px;
+    font-size: 13px;
+  }
+
+  .sponsorship-slider::before,
+  .sponsorship-slider::after {
+    width: 40px;
+  }
+
+  .sponsorship-slider::before {
+    background: linear-gradient(90deg, #f8fafc 0%, transparent 100%);
+  }
+  
+  .sponsorship-slider::after {
+    background: linear-gradient(270deg, #f8fafc 0%, transparent 100%);
+  }
+}
+
+/* ================= SMALL MOBILE (≤ 480px) ================= */
+@media (max-width: 480px) {
+  .sponsorship-section {
+    padding: 64px 20px;
+  }
+
+  .sponsorship-section::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sponsorship-header {
+    margin-bottom: 40px;
+  }
+
+  .sponsorship-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .sponsorship-title {
+    font-size: 24px;
+  }
+
+  .sponsorship-subtitle {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .sponsorship-track {
+    gap: 16px;
+  }
+
+  .sponsorship-card {
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .sponsorship-footer {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+
+  .sponsorship-slider::before,
+  .sponsorship-slider::after {
+    width: 30px;
+  }
+}
+
+/* ================= EXTRA SMALL MOBILE (≤ 375px) ================= */
+@media (max-width: 375px) {
+  .sponsorship-section {
+    padding: 56px 16px;
+  }
+
+  .sponsorship-title {
+    font-size: 22px;
+  }
+
+  .sponsorship-subtitle {
+    font-size: 12px;
+  }
+
+  .sponsorship-card {
+    width: 130px;
+    height: 130px;
+    padding: 18px;
+  }
+
+  .sponsorship-footer {
+    font-size: 11px;
+  }
+}

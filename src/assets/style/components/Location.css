@@ -1,0 +1,218 @@
+.location-section {
+  padding: 120px 80px;
+  background: radial-gradient(
+    circle at bottom right,
+    #0f766e,
+    #0b2545 60%
+  );
+}
+
+/* ================= HEADER ================= */
+.location-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.location-badge {
+  display: inline-block;
+  background: #e6f7f4;
+  color: #0f766e;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.location-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.location-subtitle {
+  margin-top: 16px;
+  color: #ffffff;
+  max-width: 620px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* ================= LAYOUT ================= */
+.location-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* ================= MAP ================= */
+.map-card {
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+}
+
+.map-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.map-footer a {
+  color: #0f766e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.map-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ================= INFO ================= */
+.location-main-card {
+  background: linear-gradient(135deg, #1e3a5f, #0f766e);
+  border-radius: 28px;
+  padding: 36px;
+  color: #ffffff;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.location-main-card h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.location-main-card p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.location-main-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.location-main-card ul li {
+  margin-bottom: 10px;
+}
+
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  background: #ffffff;
+  color: #0f172a;
+  border: none;
+  padding: 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+
+  text-decoration: none; /* ⬅️ penting kalau <a> */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.map-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= FEATURES ================= */
+.location-features {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.feature-card span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.feature-card h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .location-section {
+    padding: 100px 40px;
+  }
+
+  .location-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .map-card iframe {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-section {
+    padding: 80px 24px;
+  }
+
+  .location-title {
+    font-size: 32px;
+  }
+
+  .map-card iframe {
+    height: 300px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .map-footer {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+  }
+}

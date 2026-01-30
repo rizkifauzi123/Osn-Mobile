@@ -1,0 +1,17 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle at bottom right,
+    #0bbcd6,
+    #0a1f3a 65%
+  );
+  color: white;
+}
+
